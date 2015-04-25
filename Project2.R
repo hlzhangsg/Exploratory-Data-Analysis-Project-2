@@ -1,0 +1,6 @@
+getwd()
+setwd("/Users/honglinzhang/Documents/redwood/Courses/iDA MOOC Data Scientist/cousera/03. explore data analysis//project 2")
+NEI<-readRDS("exdata-data-NEI_data/summarySCC_PM25.rds")
+SCC<-readRDS("exdata-data-NEI_data/Source_Classification_Code.rds")
+totalNEI<-tapply(NEI$Emissions,INDEX = NEI$year, sum)
+barplot(totalNEI,main="Total Emissions by Year",xlab = "Year",ylab = "Emissions")
